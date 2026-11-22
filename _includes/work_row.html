@@ -1,0 +1,12 @@
+{% assign s = include.study %}
+<li class="work-row">
+  <a href="{{ s.url | relative_url }}">
+    <span class="idx">0{{ s.order }}</span>
+    <div>
+      <div class="meta">{{ s.company }} · {{ s.years }}</div>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.summary }}</p>
+    </div>
+    <div class="thumb">{% if s.cover %}<img src="{{ s.cover | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+  </a>
+</li>

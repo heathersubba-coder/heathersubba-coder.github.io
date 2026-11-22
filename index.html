@@ -3,6 +3,7 @@ layout: default
 ---
 <section class="hero">
   <div>
+    <p class="kicker">Learning products · AI adoption · Team building</p>
     <h1>Heather Subba</h1>
     <p class="lede">I help people get real value from complex technology by building the learning products, content systems, and teams that make it click.</p>
     <p>I've done this for professionals at Bloomberg, merchants at Amazon, university instructors and students at AWS, and English learners at Liulishuo. I'm happiest building something from zero.</p>
@@ -13,23 +14,23 @@ layout: default
     </div>
   </div>
   <div class="portrait">
-    {% if site.headshot != "" %}<img src="{{ site.headshot | relative_url }}" alt="Photo of {{ site.title }}">{% else %}<div class="monogram">HS</div>{% endif %}
+    {% if site.headshot != "" %}<img src="{{ site.headshot | relative_url }}" alt="Photo of {{ site.title }}">{% else %}<div class="monogram">H.S.</div>{% endif %}
   </div>
 </section>
 
 <div class="pillars">
   <div class="pillar">
-    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7"/><path d="M8 11h5"/></svg></div>
+    <span class="num">01</span>
     <h3>Learning products</h3>
     <p>Help centers, curriculum, and learning platforms people actually use.</p>
   </div>
   <div class="pillar">
-    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></svg></div>
+    <span class="num">02</span>
     <h3>AI adoption</h3>
     <p>Bringing AI into real workflows, from MCP integrations to teaching teams new ways to work.</p>
   </div>
   <div class="pillar">
-    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 15.2c.6-.2 1.3-.2 2-.2 2.8 0 5 2.2 5 5"/></svg></div>
+    <span class="num">03</span>
     <h3>High-performing teams</h3>
     <p>Building teams and functions from scratch, and the culture that keeps them strong.</p>
   </div>
@@ -39,17 +40,10 @@ layout: default
   <h2 class="section">Selected work</h2>
   <a href="{{ '/work/' | relative_url }}">All work →</a>
 </div>
-<ul class="cards">
+<ul class="work-list">
   {% assign studies = site.case_studies | sort: "order" %}
   {% for study in studies limit: 3 %}
-  <li class="card">
-    <a class="cover" href="{{ study.url | relative_url }}" aria-hidden="true" tabindex="-1">{% if study.cover %}<img src="{{ study.cover | relative_url }}" alt="">{% endif %}</a>
-    <div class="body">
-      <div class="meta">{{ study.company }} · {{ study.years }}</div>
-      <h3><a href="{{ study.url | relative_url }}">{{ study.title }}</a></h3>
-      <p>{{ study.summary }}</p>
-    </div>
-  </li>
+  {% include work_row.html study=study %}
   {% endfor %}
 </ul>
 

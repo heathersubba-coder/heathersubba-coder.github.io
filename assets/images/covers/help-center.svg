@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9efe9"/><stop offset="1" stop-color="#a9d6cb"/></linearGradient>
-    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f6b63"/><stop offset="1" stop-color="#e2785a"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d2026"/><stop offset="1" stop-color="#0f1013"/></linearGradient>
+    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6f84ff"/><stop offset="1" stop-color="#3049d8"/></linearGradient>
   </defs>
   <rect width="1600" height="800" fill="url(#bg)"/>
-  <circle cx="1380" cy="120" r="220" fill="#ffffff" opacity=".25"/>
-  <circle cx="160" cy="740" r="180" fill="#1f6b63" opacity=".08"/>
+  <circle cx="1380" cy="120" r="220" fill="#f1f1ef" opacity=".05"/>
+  <circle cx="160" cy="740" r="180" fill="#6f84ff" opacity=".06"/>
   <g transform="translate(330 190)">
-    <rect x="60" y="-30" width="360" height="440" rx="28" fill="#ffffff" opacity=".45"/>
-    <rect x="30" y="0" width="360" height="440" rx="28" fill="#ffffff" opacity=".7"/>
-    <rect x="0" y="30" width="360" height="440" rx="28" fill="#ffffff"/>
-    <rect x="40" y="80" width="200" height="22" rx="11" fill="#1f6b63"/>
-    <rect x="40" y="130" width="280" height="14" rx="7" fill="#c9ded9"/>
-    <rect x="40" y="160" width="250" height="14" rx="7" fill="#c9ded9"/>
-    <rect x="40" y="190" width="265" height="14" rx="7" fill="#c9ded9"/>
-    <rect x="40" y="240" width="130" height="90" rx="16" fill="#e6f1ee"/>
-    <rect x="190" y="240" width="130" height="90" rx="16" fill="#fbece6"/>
-    <rect x="40" y="350" width="280" height="14" rx="7" fill="#c9ded9"/>
-    <rect x="40" y="380" width="190" height="14" rx="7" fill="#c9ded9"/>
+    <rect x="60" y="-30" width="360" height="440" rx="28" fill="#f1f1ef" opacity=".45"/>
+    <rect x="30" y="0" width="360" height="440" rx="28" fill="#f1f1ef" opacity=".7"/>
+    <rect x="0" y="30" width="360" height="440" rx="28" fill="#f1f1ef"/>
+    <rect x="40" y="80" width="200" height="22" rx="11" fill="#6f84ff"/>
+    <rect x="40" y="130" width="280" height="14" rx="7" fill="#3b3f48"/>
+    <rect x="40" y="160" width="250" height="14" rx="7" fill="#3b3f48"/>
+    <rect x="40" y="190" width="265" height="14" rx="7" fill="#3b3f48"/>
+    <rect x="40" y="240" width="130" height="90" rx="16" fill="#2b2e35"/>
+    <rect x="190" y="240" width="130" height="90" rx="16" fill="#34373f"/>
+    <rect x="40" y="350" width="280" height="14" rx="7" fill="#3b3f48"/>
+    <rect x="40" y="380" width="190" height="14" rx="7" fill="#3b3f48"/>
   </g>
-  <path d="M720 450 C 860 450, 860 400, 1000 400" fill="none" stroke="#1f6b63" stroke-width="6" stroke-dasharray="4 16" stroke-linecap="round"/>
+  <path d="M720 450 C 860 450, 860 400, 1000 400" fill="none" stroke="#6f84ff" stroke-width="6" stroke-dasharray="4 16" stroke-linecap="round"/>
   <circle cx="1110" cy="400" r="110" fill="url(#ai)"/>
-  <path d="M1110 340 l16 42 42 16 -42 16 -16 42 -16 -42 -42 -16 42 -16z" fill="#ffffff"/>
+  <path d="M1110 340 l16 42 42 16 -42 16 -16 42 -16 -42 -42 -16 42 -16z" fill="#f1f1ef"/>
   <g transform="translate(1180 520)">
-    <rect width="250" height="96" rx="24" fill="#ffffff"/>
-    <path d="M40 96 l0 30 30 -30z" fill="#ffffff"/>
-    <rect x="28" y="28" width="150" height="14" rx="7" fill="#1f6b63"/>
-    <rect x="28" y="56" width="190" height="12" rx="6" fill="#c9ded9"/>
+    <rect width="250" height="96" rx="24" fill="#f1f1ef"/>
+    <path d="M40 96 l0 30 30 -30z" fill="#f1f1ef"/>
+    <rect x="28" y="28" width="150" height="14" rx="7" fill="#6f84ff"/>
+    <rect x="28" y="56" width="190" height="12" rx="6" fill="#3b3f48"/>
   </g>
 </svg>

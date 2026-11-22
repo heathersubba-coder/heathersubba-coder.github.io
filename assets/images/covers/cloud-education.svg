@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dcecf0"/><stop offset="1" stop-color="#b9dcd3"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d2026"/><stop offset="1" stop-color="#0f1013"/></linearGradient>
   </defs>
   <rect width="1600" height="800" fill="url(#bg)"/>
-  <circle cx="1420" cy="140" r="180" fill="#e2785a" opacity=".15"/>
-  <path d="M520 470 a120 120 0 0 1 40 -233 a170 170 0 0 1 320 -40 a140 140 0 0 1 200 150 a110 110 0 0 1 -30 123z" fill="#ffffff"/>
-  <g transform="translate(600 300)" fill="#1f6b63">
+  <circle cx="1420" cy="140" r="180" fill="#d9d9d4" opacity=".06"/>
+  <path d="M520 470 a120 120 0 0 1 40 -233 a170 170 0 0 1 320 -40 a140 140 0 0 1 200 150 a110 110 0 0 1 -30 123z" fill="#f1f1ef"/>
+  <g transform="translate(600 300)" fill="#6f84ff">
     <rect width="90" height="12" rx="6"/><rect y="30" width="150" height="12" rx="6" opacity=".4"/>
   </g>
   <g transform="translate(880 290)">
-    <path d="M30 0 h60 v70 l45 90 a20 20 0 0 1 -18 30 h-114 a20 20 0 0 1 -18 -30 l45 -90z" fill="#fbece6" stroke="#e2785a" stroke-width="6" stroke-linejoin="round"/>
-    <path d="M8 150 h104 l10 20 a10 10 0 0 1 -9 14 h-106 a10 10 0 0 1 -9 -14z" fill="#e2785a"/>
+    <path d="M30 0 h60 v70 l45 90 a20 20 0 0 1 -18 30 h-114 a20 20 0 0 1 -18 -30 l45 -90z" fill="#34373f" stroke="#d9d9d4" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M8 150 h104 l10 20 a10 10 0 0 1 -9 14 h-106 a10 10 0 0 1 -9 -14z" fill="#d9d9d4"/>
   </g>
   <g transform="translate(420 560)">
-    <path d="M0 40 L380 0 L760 40 L380 80z" fill="#1f6b63"/>
-    <path d="M160 58 v60 c0 30 440 30 440 0 v-60" fill="#1f6b63" opacity=".75"/>
-    <line x1="740" y1="40" x2="740" y2="130" stroke="#1f6b63" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="740" cy="140" r="14" fill="#e2785a"/>
+    <path d="M0 40 L380 0 L760 40 L380 80z" fill="#6f84ff"/>
+    <path d="M160 58 v60 c0 30 440 30 440 0 v-60" fill="#6f84ff" opacity=".75"/>
+    <line x1="740" y1="40" x2="740" y2="130" stroke="#6f84ff" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="740" cy="140" r="14" fill="#d9d9d4"/>
   </g>
 </svg>
