@@ -1,15 +1,20 @@
 # PROJECTS
 # Each "section" is a heading on the Projects page, with items under it.
 # To add an item, copy an existing one (from "- title" down) and change it.
-# "link", "meta", and "description" are optional.
+# "link", "meta", "description", and "image" are optional.
+# For an image, upload it to assets/images/projects and put its path after "image:".
 
 - section: Things I've built
   items:
     - title: The Layover
+      link: https://the-layover-app.vercel.app/login
+      image: /assets/images/projects/the-layover-login.jpg
+      image_alt: The Layover sign-in screen
       meta: Invite-only travel recommendations · Prototype
       description: >-
-        A website where friends share trusted travel recommendations. I took it
-        from idea to working prototype using Claude Code.
+        A private address book of the world, where friends share trusted travel
+        recommendations. I took it from idea to working prototype using Claude
+        Code. It's invite-only; email me if you'd like a look.
 
 - section: Leading change
   items:

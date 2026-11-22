@@ -85,7 +85,7 @@ h3 { font-size: 18px; line-height: 1.35; margin: 0 0 6px; font-weight: 600; lett
 .hero p.lede { color: var(--text); margin: 0 0 20px; }
 .hero .kicker { margin: 0 0 28px; }
 .portrait { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius); background: var(--surface); }
-.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; filter: grayscale(100%) contrast(1.05); transition: filter .4s ease; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; filter: none; }
 .portrait:hover img { filter: none; }
 .monogram { width: 100%; height: 100%; display: grid; place-items: center; font-family: var(--serif); font-size: 96px; color: var(--muted); }
 .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
@@ -123,6 +123,10 @@ h3 { font-size: 18px; line-height: 1.35; margin: 0 0 6px; font-weight: 600; lett
 .items a.title { text-decoration: none; }
 .items p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
 .items .meta { margin: 4px 0 0; }
+
+/* Project screenshots */
+.shot { margin: 18px 0 4px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.shot img { width: 100%; height: auto; }
 
 /* Project groups */
 .group { margin-bottom: 8px; }
