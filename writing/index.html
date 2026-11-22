@@ -1,0 +1,20 @@
+---
+layout: default
+title: Writing
+---
+<h1>Writing</h1>
+<p class="lede">Essays on learning, AI adoption, and building teams.</p>
+
+{% if site.posts.size > 0 %}
+<ul class="items">
+  {% for post in site.posts %}
+  <li>
+    <h3><a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <div class="meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+    {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="muted">First essays coming soon.</p>
+{% endif %}

@@ -1,0 +1,50 @@
+---
+layout: default
+title: Reading
+---
+<h1>Reading</h1>
+<p class="lede">Books I recommend, articles worth your time, and management ideas I keep coming back to.</p>
+
+{% if site.data.books.size > 0 %}
+<h2>Books</h2>
+<ul class="items">
+  {% for book in site.data.books %}
+  <li>
+    <h3>{% if book.link %}<a class="title" href="{{ book.link }}">{{ book.title }}</a>{% else %}{{ book.title }}{% endif %}</h3>
+    <div class="meta">{{ book.author }}{% if book.topic %} · <span class="tag">{{ book.topic }}</span>{% endif %}</div>
+    {% if book.note %}<p>{{ book.note }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if site.data.articles.size > 0 %}
+<h2>Articles</h2>
+<ul class="items">
+  {% for article in site.data.articles %}
+  <li>
+    <h3><a class="title" href="{{ article.link }}">{{ article.title }}</a></h3>
+    <div class="meta">{{ article.source }}{% if article.topic %} · <span class="tag">{{ article.topic }}</span>{% endif %}</div>
+    {% if article.note %}<p>{{ article.note }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if site.data.management_notes.size > 0 %}
+<h2>Management notes</h2>
+<ul class="items">
+  {% for tip in site.data.management_notes %}
+  <li>
+    <h3>{{ tip.idea }}</h3>
+    {% if tip.source %}<div class="meta">From {% if tip.link %}<a href="{{ tip.link }}">{{ tip.source }}</a>{% else %}{{ tip.source }}{% endif %}</div>{% endif %}
+    {% if tip.note %}<p>{{ tip.note }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% assign total = site.data.books.size | plus: site.data.articles.size | plus: site.data.management_notes.size %}
+{% if total == 0 %}
+<p class="muted">My reading list is coming soon.</p>
+{% endif %}

@@ -1,0 +1,10 @@
+# BOOKS
+# Add a book by copying the example below, removing the "# " at the start of
+# each line, and filling in your own details. Keep the spacing the same.
+# The newest book you add at the top shows first (and on the home page).
+#
+# - title: "Book title"
+#   author: "Author name"
+#   topic: "Leadership"            # optional: a short label like Leadership, Learning, AI
+#   link: "https://example.com"    # optional: where people can find the book
+#   note: "One or two sentences on why you recommend it."

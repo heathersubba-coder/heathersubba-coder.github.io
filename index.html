@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<section class="intro">
+  <h1>Heather Subba</h1>
+  <p class="lede">I help people get real value from complex technology by building the learning products, content systems, and teams that make it click.</p>
+  <p>I've done this for professionals at Bloomberg, merchants at Amazon, university instructors and students at AWS, and English learners at Liulishuo. I'm happiest building something from zero, and I care most about AI in learning and about building high-performing teams.</p>
+  <div class="links">
+    <a class="button" href="{{ '/work/' | relative_url }}">See my work</a>
+    <a class="button" href="{{ site.linkedin }}">LinkedIn</a>
+    <a class="button" href="mailto:{{ site.email }}">Email me</a>
+  </div>
+</section>
+
+<h2>Selected work</h2>
+<ul class="items">
+  {% assign studies = site.case_studies | sort: "order" %}
+  {% for study in studies limit: 3 %}
+  <li>
+    <h3><a class="title" href="{{ study.url | relative_url }}">{{ study.title }}</a></h3>
+    <div class="meta">{{ study.company }} · {{ study.years }}</div>
+    <p>{{ study.summary }}</p>
+  </li>
+  {% endfor %}
+</ul>
+<p><a href="{{ '/work/' | relative_url }}">All work →</a></p>
+
+{% if site.posts.size > 0 %}
+<h2>Recent writing</h2>
+<ul class="items">
+  {% for post in site.posts limit: 3 %}
+  <li>
+    <h3><a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <div class="meta">{{ post.date | date: "%B %Y" }}</div>
+    {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if site.data.books.size > 0 %}
+<h2>On my shelf</h2>
+<ul class="items">
+  {% for book in site.data.books limit: 3 %}
+  <li>
+    <h3>{{ book.title }}</h3>
+    <div class="meta">{{ book.author }}</div>
+    {% if book.note %}<p>{{ book.note }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+<p><a href="{{ '/reading/' | relative_url }}">Everything I'm reading →</a></p>
+{% endif %}

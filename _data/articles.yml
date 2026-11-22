@@ -1,0 +1,9 @@
+# ARTICLES
+# Add an article by copying the example below, removing the "# " at the start
+# of each line, and filling in your own details. Keep the spacing the same.
+#
+# - title: "Article title"
+#   source: "Publication or author"
+#   link: "https://example.com/article"
+#   topic: "AI"                    # optional: a short label
+#   note: "Why it's worth reading, in a sentence or two."

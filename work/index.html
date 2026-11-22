@@ -1,0 +1,18 @@
+---
+layout: default
+title: Work
+---
+<h1>Work</h1>
+<p class="lede">Case studies from building learning products, content systems, and teams.</p>
+<p class="note">Much of my recent work lives behind Bloomberg's login, so these case studies describe the problem, my approach, and the results in words rather than screenshots.</p>
+
+<ul class="items" style="margin-top:32px">
+  {% assign studies = site.case_studies | sort: "order" %}
+  {% for study in studies %}
+  <li>
+    <h3><a class="title" href="{{ study.url | relative_url }}">{{ study.title }}</a></h3>
+    <div class="meta">{{ study.company }} · {{ study.role }} · {{ study.years }}</div>
+    <p>{{ study.summary }}</p>
+  </li>
+  {% endfor %}
+</ul>

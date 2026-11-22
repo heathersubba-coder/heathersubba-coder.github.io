@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="case-study">
+  <p class="eyebrow"><a href="{{ '/work/' | relative_url }}">Work</a> · {{ page.company }}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="lede">{{ page.summary }}</p>
+
+  <dl class="facts">
+    <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
+    <div><dt>When</dt><dd>{{ page.years }}</dd></div>
+  </dl>
+
+  {% if page.results.size > 0 %}
+  <ul class="results">
+    {% for r in page.results %}
+    <li><strong>{{ r.number }}</strong><span>{{ r.label }}</span></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

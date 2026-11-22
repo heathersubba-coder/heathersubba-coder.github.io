@@ -1,0 +1,42 @@
+# ------------------------------------------------------------
+# Site settings. Edit the values on the right of each colon.
+# ------------------------------------------------------------
+title: Heather Subba
+tagline: Learning products, AI adoption, and the teams that build them
+description: >-
+  Heather Subba builds learning products, content systems, and high-performing
+  teams that help people get real value from complex technology.
+
+email: heather.subba@gmail.com
+linkedin: https://www.linkedin.com/in/heathersubba
+
+# To show a "Resume" link, upload your PDF to the assets folder and put its
+# path here, for example: /assets/Heather-Subba-Resume.pdf
+resume: ""
+
+# Leave these as they are unless you know you need to change them.
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /writing/:title/
+
+collections:
+  case_studies:
+    output: true
+    permalink: /work/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: case_study
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - HOW-TO-EDIT.md
+  - README.md

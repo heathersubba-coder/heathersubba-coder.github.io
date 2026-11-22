@@ -1,0 +1,37 @@
+# PROJECTS
+# Each "section" is a heading on the Projects page, with items under it.
+# To add an item, copy an existing one (from "- title" down) and change it.
+# "link", "meta", and "description" are optional.
+
+- section: Things I've built
+  items:
+    - title: The Layover
+      meta: Invite-only travel recommendations · Prototype
+      description: >-
+        A website where friends share trusted travel recommendations. I took it
+        from idea to working prototype using Claude Code.
+
+- section: Leading change
+  items:
+    - title: AI build-athons at Bloomberg
+      meta: Cross-functional events · Bloomberg CTO organization
+      description: >-
+        Ran build-athons that turned AI strategy into core product features, and
+        presented the approach to the CTO and his leadership team.
+    - title: Teaching an AI-assisted product workflow
+      meta: Bloomberg CTO organization
+      description: >-
+        Teach product managers a roadmap workflow that uses Claude Code for
+        critique, Gemini for document formatting, and Figma Make for interactive
+        prototypes.
+
+- section: Where I'm learning
+  items:
+    - title: Carnegie Mellon LearnLab
+      meta: "2026"
+    - title: Artificial Intelligence & Education Conference, Seoul
+      meta: "2026"
+    - title: Building Agentic AI Applications with a Problem-First Approach
+      meta: "2026"
+    - title: AI & Learning Design Bootcamp
+      meta: "2025"
