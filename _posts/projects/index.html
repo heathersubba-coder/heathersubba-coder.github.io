@@ -1,0 +1,26 @@
+---
+layout: default
+title: Projects
+---
+<header class="page-head">
+  <h1>Projects</h1>
+  <p class="lede">Things I've built on the side, change I've led, and where I'm learning.</p>
+</header>
+
+<div class="narrow">
+{% for group in site.data.projects %}
+<h2 class="label">{{ group.section }}</h2>
+<div class="group">
+  <ul class="items">
+    {% for item in group.items %}
+    <li>
+      <h3>{% if item.link %}<a class="title" href="{{ item.link }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+      {% if item.meta %}<div class="meta">{{ item.meta }}</div>{% endif %}
+      {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+      {% if item.image %}<figure class="shot">{% if item.link %}<a href="{{ item.link }}">{% endif %}<img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy">{% if item.link %}</a>{% endif %}</figure>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endfor %}
+</div>

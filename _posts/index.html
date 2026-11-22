@@ -1,0 +1,78 @@
+---
+layout: default
+---
+<section class="hero">
+  <div>
+    <p class="kicker">Learning products · AI adoption · Team building</p>
+    <h1>Heather Subba</h1>
+    <p class="lede">I help people get real value from complex technology by building the learning products, content systems, and teams that make it click.</p>
+    <p>I've done this for professionals at Bloomberg, merchants at Amazon, university instructors and students at AWS, and English learners at Liulishuo. I'm happiest building something from zero.</p>
+    <div class="links">
+      <a class="button primary" href="{{ '/work/' | relative_url }}">See my work</a>
+      <a class="button" href="{{ site.linkedin }}">LinkedIn</a>
+      <a class="button" href="mailto:{{ site.email }}">Email me</a>
+    </div>
+  </div>
+  <figure class="portrait">
+    <div class="frame">
+      {% if site.headshot != "" %}<div><img src="{{ site.headshot | relative_url }}" alt="Photo of {{ site.title }}"></div>{% else %}<div class="monogram">H.S.</div>{% endif %}
+    </div>
+  </figure>
+</section>
+
+<div class="pillars">
+  <div class="pillar">
+    <span class="num">01</span>
+    <h3>Learning products</h3>
+    <p>Help centers, curriculum, and learning platforms people actually use.</p>
+  </div>
+  <div class="pillar">
+    <span class="num">02</span>
+    <h3>AI adoption</h3>
+    <p>Bringing AI into real workflows, from MCP integrations to teaching teams new ways to work.</p>
+  </div>
+  <div class="pillar">
+    <span class="num">03</span>
+    <h3>High-performing teams</h3>
+    <p>Building teams and functions from scratch, and the culture that keeps them strong.</p>
+  </div>
+</div>
+
+<div class="section-head">
+  <h2 class="section">Selected work</h2>
+  <a href="{{ '/work/' | relative_url }}">All work →</a>
+</div>
+<ul class="work-list">
+  {% assign studies = site.case_studies | sort: "order" %}
+  {% for study in studies limit: 3 %}
+  {% include work_row.html study=study %}
+  {% endfor %}
+</ul>
+
+{% if site.posts.size > 0 %}
+<div class="section-head">
+  <h2 class="section">Recent writing</h2>
+  <a href="{{ '/writing/' | relative_url }}">All writing →</a>
+</div>
+<ul class="items narrow">
+  {% for post in site.posts limit: 3 %}
+  <li>
+    <h3><a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <div class="meta">{{ post.date | date: "%B %Y" }}</div>
+    {% if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if site.data.books.size > 0 %}
+<div class="section-head">
+  <h2 class="section">On my shelf</h2>
+  <a href="{{ '/reading/' | relative_url }}">Everything I'm reading →</a>
+</div>
+<ul class="books">
+  {% for book in site.data.books limit: 3 %}
+  {% include book.html book=book %}
+  {% endfor %}
+</ul>
+{% endif %}
