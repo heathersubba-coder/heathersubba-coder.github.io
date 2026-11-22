@@ -78,16 +78,18 @@ h3 { font-size: 18px; line-height: 1.35; margin: 0 0 6px; font-weight: 600; lett
 .section-head a:hover { color: var(--text); }
 
 /* Hero */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 72px; align-items: end; padding-bottom: 72px; border-bottom: 1px solid var(--line); }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 72px; align-items: center; padding-bottom: 72px; border-bottom: 1px solid var(--line); }
 .hero h1 { font-size: 104px; line-height: 0.95; margin-bottom: 36px; }
 .hero .lede { font-size: 23px; max-width: 600px; }
 .hero p { max-width: 600px; color: var(--muted); margin: 0; }
 .hero p.lede { color: var(--text); margin: 0 0 20px; }
 .hero .kicker { margin: 0 0 28px; }
-.portrait { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius); background: var(--surface); }
-.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; filter: none; }
-.portrait:hover img { filter: none; }
-.monogram { width: 100%; height: 100%; display: grid; place-items: center; font-family: var(--serif); font-size: 96px; color: var(--muted); }
+.portrait { position: relative; justify-self: end; width: 220px; margin: 0; isolation: isolate; }
+.portrait .frame::before { content: ""; position: absolute; inset: 0; transform: translate(14px, 14px); border: 1px solid var(--line); z-index: -1; }
+.portrait .frame { position: relative; aspect-ratio: 4 / 5; padding: 10px; background: var(--bg); border: 1px solid var(--line); box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.06); }
+.portrait .frame > * { width: 100%; height: 100%; overflow: hidden; background: var(--surface); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; filter: saturate(.85); }
+.monogram { display: grid; place-items: center; font-family: var(--serif); font-size: 56px; color: var(--muted); }
 .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
 .button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid var(--line); color: var(--text); transition: border-color .2s, background .2s, color .2s; }
 .button:hover { border-color: var(--text); color: var(--text); }
@@ -139,7 +141,7 @@ h3 { font-size: 18px; line-height: 1.35; margin: 0 0 6px; font-weight: 600; lett
 
 /* Case study */
 .case-study h1 { font-size: 68px; }
-.case-hero { border-radius: var(--radius); overflow: hidden; margin: 48px 0 48px; aspect-ratio: 21 / 9; background: var(--surface); }
+.case-hero { border-radius: var(--radius); overflow: hidden; margin: 48px 0 48px; aspect-ratio: 2 / 1; background: var(--surface); }
 .case-hero img { width: 100%; height: 100%; object-fit: cover; }
 .facts { display: flex; flex-wrap: wrap; gap: 8px 48px; margin: 0 0 40px; font-size: 14px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .facts div { display: flex; gap: 10px; }
@@ -189,7 +191,7 @@ h2.label + .books { border-top: 1px solid var(--strong-line); }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; gap: 40px; }
   .hero h1 { font-size: 72px; }
-  .portrait { max-width: 280px; }
+  .portrait { justify-self: start; width: 200px; }
   .work-row a { grid-template-columns: 40px minmax(0, 1fr); }
   .work-row .thumb { grid-column: 2; }
 }
@@ -199,7 +201,7 @@ h2.label + .books { border-top: 1px solid var(--strong-line); }
   main.wrap { padding-top: 40px; }
   .hero h1 { font-size: 56px; margin-bottom: 24px; }
   .hero .lede { font-size: 19px; }
-  .portrait { max-width: 200px; order: -1; }
+  .portrait { width: 150px; order: -1; }
   .pillars { grid-template-columns: 1fr; }
   .pillar, .pillar + .pillar { padding: 28px 0 4px; border-left: none; border-top: 1px solid var(--line); }
   h1, .page-head h1, .case-study h1 { font-size: 46px; }
@@ -210,7 +212,6 @@ h2.label + .books { border-top: 1px solid var(--strong-line); }
   .work-row .thumb { grid-column: 1; order: -1; }
   .flow { flex-direction: column; }
   .flow .arrow { flex: 0 0 24px; transform: rotate(90deg); }
-  .case-hero { aspect-ratio: 16 / 10; }
   .results li + li { padding-left: 0; border-left: none; }
   .results { grid-template-columns: 1fr 1fr; }
   .results strong { font-size: 40px; }

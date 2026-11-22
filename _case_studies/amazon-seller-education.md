@@ -3,7 +3,7 @@ title: Rebuilding Amazon's global seller education platform
 company: Amazon
 role: Principal Learning Product Leader
 years: 2021–2022
-cover: /assets/images/covers/seller-education.svg
+cover: /assets/images/covers/seller-education.jpg
 order: 3
 summary: >-
   I built and led a 40-person organization to rebuild the education platform

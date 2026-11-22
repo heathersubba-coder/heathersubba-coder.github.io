@@ -3,7 +3,7 @@ title: Building a mobile English curriculum from scratch
 company: Liulishuo
 role: Curriculum Development Lead
 years: 2017–2018
-cover: /assets/images/covers/mobile-curriculum.svg
+cover: /assets/images/covers/mobile-curriculum.jpg
 order: 5
 summary: >-
   I built the curriculum for an AI-powered English learning app, then used

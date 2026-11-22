@@ -3,7 +3,7 @@ title: Building Bloomberg's Help Center from zero
 company: Bloomberg
 role: Product Manager
 years: 2022–present
-cover: /assets/images/covers/help-center.svg
+cover: /assets/images/covers/help-center.jpg
 order: 1
 summary: >-
   I built and launched a Help Center that meets users inside the product, then

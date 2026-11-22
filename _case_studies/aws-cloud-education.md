@@ -3,7 +3,7 @@ title: Designing cloud curriculum with university instructors
 company: Amazon Web Services
 role: Senior Product Manager, Cloud Education
 years: 2018–2021
-cover: /assets/images/covers/cloud-education.svg
+cover: /assets/images/covers/cloud-education.jpg
 order: 4
 summary: >-
   I designed cloud curriculum and machine learning labs around what university

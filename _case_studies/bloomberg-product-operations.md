@@ -3,7 +3,7 @@ title: Standing up product operations at Bloomberg
 company: Bloomberg
 role: Strategic Operations Lead, then Interim Head of Product
 years: 2025–present
-cover: /assets/images/covers/product-operations.svg
+cover: /assets/images/covers/product-operations.jpg
 order: 2
 summary: >-
   As the first product operations hire in Bloomberg's CTO organization, I built
