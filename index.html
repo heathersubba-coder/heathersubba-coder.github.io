@@ -1,33 +1,64 @@
 ---
 layout: default
 ---
-<section class="intro">
-  <h1>Heather Subba</h1>
-  <p class="lede">I help people get real value from complex technology by building the learning products, content systems, and teams that make it click.</p>
-  <p>I've done this for professionals at Bloomberg, merchants at Amazon, university instructors and students at AWS, and English learners at Liulishuo. I'm happiest building something from zero, and I care most about AI in learning and about building high-performing teams.</p>
-  <div class="links">
-    <a class="button" href="{{ '/work/' | relative_url }}">See my work</a>
-    <a class="button" href="{{ site.linkedin }}">LinkedIn</a>
-    <a class="button" href="mailto:{{ site.email }}">Email me</a>
+<section class="hero">
+  <div>
+    <h1>Heather Subba</h1>
+    <p class="lede">I help people get real value from complex technology by building the learning products, content systems, and teams that make it click.</p>
+    <p>I've done this for professionals at Bloomberg, merchants at Amazon, university instructors and students at AWS, and English learners at Liulishuo. I'm happiest building something from zero.</p>
+    <div class="links">
+      <a class="button primary" href="{{ '/work/' | relative_url }}">See my work</a>
+      <a class="button" href="{{ site.linkedin }}">LinkedIn</a>
+      <a class="button" href="mailto:{{ site.email }}">Email me</a>
+    </div>
+  </div>
+  <div class="portrait">
+    {% if site.headshot != "" %}<img src="{{ site.headshot | relative_url }}" alt="Photo of {{ site.title }}">{% else %}<div class="monogram">HS</div>{% endif %}
   </div>
 </section>
 
-<h2>Selected work</h2>
-<ul class="items">
+<div class="pillars">
+  <div class="pillar">
+    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7"/><path d="M8 11h5"/></svg></div>
+    <h3>Learning products</h3>
+    <p>Help centers, curriculum, and learning platforms people actually use.</p>
+  </div>
+  <div class="pillar">
+    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></svg></div>
+    <h3>AI adoption</h3>
+    <p>Bringing AI into real workflows, from MCP integrations to teaching teams new ways to work.</p>
+  </div>
+  <div class="pillar">
+    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 15.2c.6-.2 1.3-.2 2-.2 2.8 0 5 2.2 5 5"/></svg></div>
+    <h3>High-performing teams</h3>
+    <p>Building teams and functions from scratch, and the culture that keeps them strong.</p>
+  </div>
+</div>
+
+<div class="section-head">
+  <h2 class="section">Selected work</h2>
+  <a href="{{ '/work/' | relative_url }}">All work →</a>
+</div>
+<ul class="cards">
   {% assign studies = site.case_studies | sort: "order" %}
   {% for study in studies limit: 3 %}
-  <li>
-    <h3><a class="title" href="{{ study.url | relative_url }}">{{ study.title }}</a></h3>
-    <div class="meta">{{ study.company }} · {{ study.years }}</div>
-    <p>{{ study.summary }}</p>
+  <li class="card">
+    <a class="cover" href="{{ study.url | relative_url }}" aria-hidden="true" tabindex="-1">{% if study.cover %}<img src="{{ study.cover | relative_url }}" alt="">{% endif %}</a>
+    <div class="body">
+      <div class="meta">{{ study.company }} · {{ study.years }}</div>
+      <h3><a href="{{ study.url | relative_url }}">{{ study.title }}</a></h3>
+      <p>{{ study.summary }}</p>
+    </div>
   </li>
   {% endfor %}
 </ul>
-<p><a href="{{ '/work/' | relative_url }}">All work →</a></p>
 
 {% if site.posts.size > 0 %}
-<h2>Recent writing</h2>
-<ul class="items">
+<div class="section-head">
+  <h2 class="section">Recent writing</h2>
+  <a href="{{ '/writing/' | relative_url }}">All writing →</a>
+</div>
+<ul class="items narrow">
   {% for post in site.posts limit: 3 %}
   <li>
     <h3><a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -39,15 +70,13 @@ layout: default
 {% endif %}
 
 {% if site.data.books.size > 0 %}
-<h2>On my shelf</h2>
-<ul class="items">
+<div class="section-head">
+  <h2 class="section">On my shelf</h2>
+  <a href="{{ '/reading/' | relative_url }}">Everything I'm reading →</a>
+</div>
+<ul class="books">
   {% for book in site.data.books limit: 3 %}
-  <li>
-    <h3>{{ book.title }}</h3>
-    <div class="meta">{{ book.author }}</div>
-    {% if book.note %}<p>{{ book.note }}</p>{% endif %}
-  </li>
+  {% include book.html book=book %}
   {% endfor %}
 </ul>
-<p><a href="{{ '/reading/' | relative_url }}">Everything I'm reading →</a></p>
 {% endif %}

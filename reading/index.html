@@ -2,24 +2,23 @@
 layout: default
 title: Reading
 ---
-<h1>Reading</h1>
-<p class="lede">Books I recommend, articles worth your time, and management ideas I keep coming back to.</p>
+<header class="page-head">
+  <h1>Reading</h1>
+  <p class="lede">Books I recommend, articles worth your time, and management ideas I keep coming back to.</p>
+</header>
 
 {% if site.data.books.size > 0 %}
-<h2>Books</h2>
-<ul class="items">
+<h2 class="label">Books</h2>
+<ul class="books">
   {% for book in site.data.books %}
-  <li>
-    <h3>{% if book.link %}<a class="title" href="{{ book.link }}">{{ book.title }}</a>{% else %}{{ book.title }}{% endif %}</h3>
-    <div class="meta">{{ book.author }}{% if book.topic %} · <span class="tag">{{ book.topic }}</span>{% endif %}</div>
-    {% if book.note %}<p>{{ book.note }}</p>{% endif %}
-  </li>
+  {% include book.html book=book %}
   {% endfor %}
 </ul>
 {% endif %}
 
+<div class="narrow">
 {% if site.data.articles.size > 0 %}
-<h2>Articles</h2>
+<h2 class="label">Articles</h2>
 <ul class="items">
   {% for article in site.data.articles %}
   <li>
@@ -32,7 +31,7 @@ title: Reading
 {% endif %}
 
 {% if site.data.management_notes.size > 0 %}
-<h2>Management notes</h2>
+<h2 class="label">Management notes</h2>
 <ul class="items">
   {% for tip in site.data.management_notes %}
   <li>
@@ -48,3 +47,4 @@ title: Reading
 {% if total == 0 %}
 <p class="muted">My reading list is coming soon.</p>
 {% endif %}
+</div>

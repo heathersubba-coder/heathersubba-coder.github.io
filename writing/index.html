@@ -2,9 +2,12 @@
 layout: default
 title: Writing
 ---
-<h1>Writing</h1>
-<p class="lede">Essays on learning, AI adoption, and building teams.</p>
+<header class="page-head">
+  <h1>Writing</h1>
+  <p class="lede">Essays on learning, AI adoption, and building teams.</p>
+</header>
 
+<div class="narrow">
 {% if site.posts.size > 0 %}
 <ul class="items">
   {% for post in site.posts %}
@@ -18,3 +21,4 @@ title: Writing
 {% else %}
 <p class="muted">First essays coming soon.</p>
 {% endif %}
+</div>

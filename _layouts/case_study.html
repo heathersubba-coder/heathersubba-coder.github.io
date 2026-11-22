@@ -2,24 +2,32 @@
 layout: default
 ---
 <article class="case-study">
-  <p class="eyebrow"><a href="{{ '/work/' | relative_url }}">Work</a> · {{ page.company }}</p>
-  <h1>{{ page.title }}</h1>
-  <p class="lede">{{ page.summary }}</p>
+  <div class="narrow">
+    <p class="eyebrow"><a href="{{ '/work/' | relative_url }}">Work</a> · {{ page.company }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ page.summary }}</p>
+  </div>
 
-  <dl class="facts">
-    <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
-    <div><dt>When</dt><dd>{{ page.years }}</dd></div>
-  </dl>
+  {% if page.cover %}<div class="case-hero"><img src="{{ page.cover | relative_url }}" alt=""></div>{% endif %}
 
-  {% if page.results.size > 0 %}
-  <ul class="results">
-    {% for r in page.results %}
-    <li><strong>{{ r.number }}</strong><span>{{ r.label }}</span></li>
-    {% endfor %}
-  </ul>
-  {% endif %}
+  <div class="narrow">
+    <dl class="facts">
+      <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
+      <div><dt>When</dt><dd>{{ page.years }}</dd></div>
+    </dl>
 
-  <div class="prose">
-    {{ content }}
+    {% if page.results.size > 0 %}
+    <ul class="results">
+      {% for r in page.results %}
+      <li><strong>{{ r.number }}</strong><span>{{ r.label }}</span></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    <p style="margin-top:48px"><a href="{{ '/work/' | relative_url }}">← All work</a></p>
   </div>
 </article>

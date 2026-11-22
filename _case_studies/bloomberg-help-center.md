@@ -3,6 +3,7 @@ title: Building Bloomberg's Help Center from zero
 company: Bloomberg
 role: Product Manager
 years: 2022–present
+cover: /assets/images/covers/help-center.svg
 order: 1
 summary: >-
   I built and launched a Help Center that meets users inside the product, then
@@ -39,6 +40,10 @@ find at the moment they needed it.
 - **Scaled the content behind it.** Two team leads report to me and run an
   eight-person team of technical writers and content developers producing
   interactive notebooks, API docs, and data science learning tracks.
+
+## How it fits together
+
+<div class="flow"><div class="step"><b>Content team</b><span>Docs, notebooks, learning tracks</span></div><div class="arrow">→</div><div class="step hl"><b>Help Center</b><span>With a personalized in-product homepage</span></div><div class="arrow">→</div><div class="step hl2"><b>MCP service</b><span>Makes content available to AI</span></div><div class="arrow">→</div><div class="step"><b>AI assistant</b><span>Answers inside the user's workflow</span></div></div>
 
 ## Results
 

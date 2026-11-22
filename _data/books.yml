@@ -2,9 +2,12 @@
 # Add a book by copying the example below, removing the "# " at the start of
 # each line, and filling in your own details. Keep the spacing the same.
 # The newest book you add at the top shows first (and on the home page).
+# Add the ISBN to show the book's cover. If no cover is found, a colored
+# placeholder with the book's first letter shows instead.
 #
 # - title: "Book title"
 #   author: "Author name"
 #   topic: "Leadership"            # optional: a short label like Leadership, Learning, AI
+#   isbn: "9780735219564"          # optional: shows the cover automatically (find it on the book's Amazon or Goodreads page)
 #   link: "https://example.com"    # optional: where people can find the book
 #   note: "One or two sentences on why you recommend it."

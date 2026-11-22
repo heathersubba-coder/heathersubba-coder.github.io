@@ -1,0 +1,13 @@
+{% assign b = include.book %}
+<li class="book">
+  <div class="cover">
+    {{ b.title | slice: 0 }}
+    {% if b.cover %}<img src="{{ b.cover }}" alt="Cover of {{ b.title }}" loading="lazy" onerror="this.remove()">{% elsif b.isbn %}<img src="https://covers.openlibrary.org/b/isbn/{{ b.isbn }}-M.jpg?default=false" alt="Cover of {{ b.title }}" loading="lazy" onerror="this.remove()">{% endif %}
+  </div>
+  <div>
+    <h3>{% if b.link %}<a class="title" href="{{ b.link }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</h3>
+    <div class="meta">{{ b.author }}</div>
+    {% if b.topic %}<div style="margin-top:6px"><span class="tag">{{ b.topic }}</span></div>{% endif %}
+    {% if b.note %}<p>{{ b.note }}</p>{% endif %}
+  </div>
+</li>

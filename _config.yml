@@ -14,6 +14,11 @@ linkedin: https://www.linkedin.com/in/heathersubba
 # path here, for example: /assets/Heather-Subba-Resume.pdf
 resume: ""
 
+# To show your photo on the home page, upload it to the assets folder
+# and put its path here, for example: /assets/headshot.jpg
+# (A square photo works best.) Until then, your initials show instead.
+headshot: ""
+
 # Leave these as they are unless you know you need to change them.
 url: ""
 baseurl: ""

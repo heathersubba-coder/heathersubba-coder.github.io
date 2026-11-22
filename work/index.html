@@ -2,17 +2,22 @@
 layout: default
 title: Work
 ---
-<h1>Work</h1>
-<p class="lede">Case studies from building learning products, content systems, and teams.</p>
-<p class="note">Much of my recent work lives behind Bloomberg's login, so these case studies describe the problem, my approach, and the results in words rather than screenshots.</p>
+<header class="page-head">
+  <h1>Work</h1>
+  <p class="lede">Case studies from building learning products, content systems, and teams.</p>
+</header>
+<p class="note">Much of my recent work lives behind Bloomberg's login, so these case studies describe the problem, my approach, and the results in words and diagrams rather than screenshots.</p>
 
-<ul class="items" style="margin-top:32px">
+<ul class="cards">
   {% assign studies = site.case_studies | sort: "order" %}
   {% for study in studies %}
-  <li>
-    <h3><a class="title" href="{{ study.url | relative_url }}">{{ study.title }}</a></h3>
-    <div class="meta">{{ study.company }} · {{ study.role }} · {{ study.years }}</div>
-    <p>{{ study.summary }}</p>
+  <li class="card">
+    <a class="cover" href="{{ study.url | relative_url }}" aria-hidden="true" tabindex="-1">{% if study.cover %}<img src="{{ study.cover | relative_url }}" alt="">{% endif %}</a>
+    <div class="body">
+      <div class="meta">{{ study.company }} · {{ study.years }}</div>
+      <h3><a href="{{ study.url | relative_url }}">{{ study.title }}</a></h3>
+      <p>{{ study.summary }}</p>
+    </div>
   </li>
   {% endfor %}
 </ul>

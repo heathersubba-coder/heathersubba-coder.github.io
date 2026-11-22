@@ -3,6 +3,7 @@ title: Rebuilding Amazon's global seller education platform
 company: Amazon
 role: Principal Learning Product Leader
 years: 2021–2022
+cover: /assets/images/covers/seller-education.svg
 order: 3
 summary: >-
   I built and led a 40-person organization to rebuild the education platform
@@ -27,6 +28,10 @@ content was too hard.
 - **Made content findable.** I introduced a structured content taxonomy so
   sellers could find what they needed.
 - **Listened and adjusted.** I used NPS feedback to guide ongoing improvements.
+
+## How the team was organized
+
+<div class="org"><div class="node me">Heather</div><div class="line"></div><div class="row"><div class="node lead">Team lead</div><div class="node lead">Team lead</div><div class="node lead">Team lead</div></div><div class="line"></div><div class="node team">40 technical writers and designers</div></div>
 
 ## Results
 

@@ -3,6 +3,7 @@ title: Standing up product operations at Bloomberg
 company: Bloomberg
 role: Strategic Operations Lead, then Interim Head of Product
 years: 2025–present
+cover: /assets/images/covers/product-operations.svg
 order: 2
 summary: >-
   As the first product operations hire in Bloomberg's CTO organization, I built
@@ -31,3 +32,7 @@ pain points engineering was feeling.
   and Figma Make for interactive prototypes.
 - **Led the product team.** As interim head of product, I lead five product
   managers.
+
+## The shift
+
+<div class="flow"><div class="step"><b>Engineering pain points</b><span>What slowed teams down</span></div><div class="arrow">→</div><div class="step hl"><b>Operating rhythms</b><span>Designed around those pain points</span></div><div class="arrow">→</div><div class="step hl2"><b>Value-stream teams</b><span>Leadership adopts a new structure</span></div></div>

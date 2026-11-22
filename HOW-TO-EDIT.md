@@ -103,6 +103,29 @@ To change the order they appear in, change the `order:` numbers.
 
 A **Resume** link then appears in the menu.
 
+### Add your photo
+
+1. Pick a square photo (a crop of a headshot works well), ideally around 600×600 pixels.
+2. Name the photo `headshot.jpg` on your computer.
+3. On GitHub, open the `assets` folder → **Add file** → **Upload files**, and upload it.
+4. Open `_config.yml` and change the headshot line to:
+   `headshot: "/assets/headshot.jpg"`
+
+Until you add a photo, your initials appear in the circle instead.
+
+### Book covers
+
+Add an `isbn:` line to any book in `_data/books.yml` and its cover appears
+automatically. You'll find the ISBN on the book's Amazon or Goodreads page (use the
+13-digit one). If a cover can't be found, a colored placeholder shows instead.
+
+### Change the colors
+
+Open `assets/css/style.css`. The colors are at the very top, each with a name:
+`--accent` is the deep teal and `--accent-2` is the warm coral. Replace a color code
+(like `#1f6b63`) with any other, and the whole site updates. There's a second set
+below for dark mode.
+
 ### Change your intro, email, or LinkedIn
 
 - Home page text: `index.html` (edit the sentences between the `<p>` tags)
